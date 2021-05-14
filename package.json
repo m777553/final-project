@@ -1,0 +1,45 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "Это последнее задание в курсе. Дедлайн - **17.05**!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode production",
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "start": "webpack-dev-server",
+    "test": "npm run eslint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m777553/final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m777553/final-project/issues"
+  },
+  "homepage": "https://github.com/m777553/final-project#readme",
+  "dependencies": {
+    "axios": "0.21.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.4",
+    "react-router-dom": "5.2.0",
+    "redux": "4.1.0",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.14.2",
+    "@babel/preset-env": "7.14.2",
+    "@babel/preset-react": "7.13.13",
+    "@webpack-cli/serve": "^1.4.0",
+    "babel-loader": "8.2.2",
+    "eslint": "7.26.0",
+    "json-server": "0.16.3",
+    "webpack": "4.46.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.2"
+  }
+}
