@@ -1,5 +1,15 @@
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы редактора
+.vscode
+
+# Вспомогательные файлы
 /node_modules
-/build
-npm-debug.log*
+*.log*
 *.psd
 
+# Файлы сборки
+public/bundle.js
+public/bundle.js.map
