@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { catchPokemon, choosePokemon } from "../actions";
+import PropTypes from "prop-types";
 
-const Pokemon = ({ pokemonData, choosenPokemon, onCaughtPokemon }) => {
+const Pokemon = ({ pokemonData }) => {
   const dispatch = useDispatch();
 
   const onCaughtClick = (evt) => {
@@ -50,7 +51,7 @@ const Pokemon = ({ pokemonData, choosenPokemon, onCaughtPokemon }) => {
           </div>
 
           <button
-            disabled = {!!pokemonData.isCaught}
+            disabled={!!pokemonData.isCaught}
             data-id={pokemonData.id}
             onClick={onCaughtClick}
             className={`pokemon__catchBtn ${
@@ -63,6 +64,17 @@ const Pokemon = ({ pokemonData, choosenPokemon, onCaughtPokemon }) => {
       </li>
     </React.Fragment>
   );
+};
+
+Pokemon.propTypes = {
+  pokemonData: PropTypes.objectOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      isCaught: PropTypes.bool,
+      date: PropTypes.string,
+    })
+  ),
 };
 
 export default Pokemon;

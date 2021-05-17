@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { catchPokemon } from "../actions";
-
+import PropTypes from "prop-types";
 
 const PokemonPage = ({ idSelect }) => {
-
-  const selectedPokemon = useSelector((state) => state.load.data[idSelect]);
+  const selectedPokemon = useSelector((state) => state.load.data[idSelect]) || {
+    name: "CHARMANDER",
+    id: 4,
+  };
   const dispatch = useDispatch();
-
 
   const onCaughtClick = (evt) => {
     evt.preventDefault();
@@ -40,9 +41,6 @@ const PokemonPage = ({ idSelect }) => {
           )}
         </div>
 
-        {/* 
-          <p className="pokemonPage__id"><b>id</b> {pokemonData.id}</p> */}
-
         <button
           disabled={!!selectedPokemon.isCaught}
           data-id={selectedPokemon.id}
@@ -56,6 +54,10 @@ const PokemonPage = ({ idSelect }) => {
       </div>
     </section>
   );
+};
+
+PokemonPage.propTypes = {
+  idSelect: PropTypes.number,
 };
 
 export default PokemonPage;

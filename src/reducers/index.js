@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 
+
 import { INIT_STATE } from "../utilits/consts";
 
 function loadPokemonsReducer(state = INIT_STATE, action) {
@@ -33,6 +34,8 @@ function choosePokemonReducer(state = INIT_STATE, action) {
       return state;
   }
 }
+
+
 
 export default combineReducers({
   load: loadPokemonsReducer,

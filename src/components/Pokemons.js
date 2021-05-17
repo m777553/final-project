@@ -1,64 +1,48 @@
-import React, {  useState } from "react";
-import {useSelector} from "react-redux";
-
-
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 import Pokemon from "./Pokemon";
 
-
-import {COUNT_PER_STEP} from "../utilits/consts"
-//const COUNT_PER_STEP = 5;
-// const COUNT_PER_STEP = 12;
+import { COUNT_PER_STEP } from "../utilits/consts";
 
 const Pokemons = () => {
-
   const [visible, setVisible] = useState(COUNT_PER_STEP);
-// useEffect(()=>{
-//   setVisible(visible+COUNT_PER_STEP);
-//     console.log("visible after effect " + visible);
-    
-// },[visible]);
 
-  const pokemonsData = useSelector((state)=>state.load.data);
+  const pokemonsData = useSelector((state) => state.load.data);
 
-  if(pokemonsData===false){
+  if (pokemonsData === false) {
     return (
       <div>
-        
-        <img src='./img/error.gif' alt="Can't load pokemons. Server error" className="pokemons__errorLoadImg"/>
+        <img
+          src="./img/error.gif"
+          alt="Can't load pokemons. Server error"
+          className="pokemons__errorLoadImg"
+        />
       </div>
     );
   }
 
-  if(pokemonsData.length===0){
+  if (pokemonsData.length === 0) {
     return (
       <div>
-        <img src='./img/loading.gif' alt="In process of loading" className="pokemons__errorLoadImg"/>
+        <img
+          src="./img/loading.gif"
+          alt="In process of loading"
+          className="pokemons__errorLoadImg"
+        />
       </div>
     );
-  }  
+  }
 
-  const pokemonRender = (to) =>
+  const pokemonsRender = (to) =>
     pokemonsData.slice(0, to).map((pokemonData) => {
-      return (
-        <Pokemon
-          key={pokemonData.id}
-          pokemonData={pokemonData}
-          //choosenPokemon={choosenPokemon}
-          // CHOOSE_POKEMON
-          //onCaughtPokemon={onCaughtPokemon}
-          //CATCH_POKEMON
-        />
-      );
+      return <Pokemon key={pokemonData.id} pokemonData={pokemonData} />;
     });
 
   const onLoadMoreBtnClick = () => {
-    setVisible(visible+COUNT_PER_STEP);
-    pokemonRender(visible);
-
-    
+    setVisible(visible + COUNT_PER_STEP);
+    pokemonsRender(visible);
   };
-
 
   const renderLoadMoreBtn = () => {
     return (
@@ -68,7 +52,7 @@ const Pokemons = () => {
     );
   };
   let loadMoreBtn = renderLoadMoreBtn();
-  let pokemonsList = pokemonRender(visible);
+  let pokemonsList = pokemonsRender(visible);
   return (
     <section className="pokemons">
       <div className="pokemons__wrap">

@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  // BrowserRouter,
-  Route,
-  Switch,
-  // Redirect,
-  // withRouter,
-} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import Pokemons from "./Pokemons";
@@ -14,42 +8,29 @@ import PokemonPage from "./PokemonPage";
 import CaughtPokemons from "./CaughtPokemons";
 import { useSelector } from "react-redux";
 
-
-
 const App = () => {
-
-
-
-const choosenPokemon = useSelector(state => state.choose.pokemonSelected);
+  const choosenPokemon = useSelector((state) => state.choose.pokemonSelected);
   return (
     <React.Fragment>
       <Header />
       <main>
         <Switch>
-          <Route path="/pocemonPage">
-            <PokemonPage idSelect={choosenPokemon}/>
+          <Route exact path="/pocemonPage/">
+            <PokemonPage idSelect={choosenPokemon} />
           </Route>
 
-          <Route path="/caughtPokemons">
-            <CaughtPokemons  />
+          <Route exact path="/caughtPokemons">
+            <CaughtPokemons />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Pokemons />
           </Route>
         </Switch>
-
-       
       </main>
       <Footer />
     </React.Fragment>
   );
 };
 
+
 export default App;
-
-// TODO
-
-// лого загрузки изображений
-
-
-
