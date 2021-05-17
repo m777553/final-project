@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="utf-8" />
+
+    <title>Pokedex</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="./img/png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <h1 class="header__title">Pokemons</h1>
+        <nav class="header__nav">
+          <a class="header__navLink" href="#">Main page</a>
+          <a class="header__navLink" href="caught.html">Caught Pokemons</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="pokemons">
+        <div class="pokemons__wrap">
+          <div class="pokemons__listWrap">
+            <ul class="pokemons__list">
+              <li class="pokemons__item pokemon">
+                <div class="pokemon__wrap">
+                  <a href="pokemon.html"><h2 class="pokemon__name">Name</h2></a>
+                  <a href="pokemon.html"><img src="./img/1.png" alt="" /></a>
+                  <div class="pokemon__infoWrap">
+                    <p class="pokemon__id">id</p>
+                    <p class="pokemon__date"><b>Was caught</b> </br>2015/06/18 23:15</p>
+                </div>
+                  <button class="pokemon__catchBtn disable">Catch</button>
+                </div>
+              </li>
+              <li class="pokemons__item pokemon">
+                <div class="pokemon__wrap">
+                  <a href=""><h2 class="pokemon__name">Name</h2></a>
+                  <a href=""><img src="./img/1.png" alt="" /></a>
+                  <p class="pokemon__id">id</p>
+                  <button class="pokemon__catchBtn">Catch</button>
+                </div>
+              </li>
+              <li class="pokemons__item pokemon">
+                <div class="pokemon__wrap">
+                  <a href=""><h2 class="pokemon__name">Name</h2></a>
+                  <a href=""><img src="./img/1.png" alt="" /></a>
+                  <p class="pokemon__id">id</p>
+                  <button class="pokemon__catchBtn">Catch</button>
+                </div>
+              </li>
+              <li class="pokemons__item pokemon">
+                <div class="pokemon__wrap">
+                  <a href=""><h2 class="pokemon__name">Name</h2></a>
+                  <a href=""><img src="./img/1.png" alt="" /></a>
+                  <p class="pokemon__id">id</p>
+                  <button class="pokemon__catchBtn">Catch</button>
+                </div>
+              </li>              <li class="pokemons__item pokemon">
+                <div class="pokemon__wrap">
+                  <a href=""><h2 class="pokemon__name">Name</h2></a>
+                  <a href=""><img src="./img/1.png" alt="" /></a>
+                  <p class="pokemon__id">id</p>
+                  <button class="pokemon__catchBtn">Catch</button>
+                </div>
+              </li>
+            </ul>
+            <button class="pokemons__loadMoreBtn">Load more</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrap">
+        <p class="footer__text">Find more interesting information</p>
+        <a
+          class="footer__link footer__link--wiki"
+          href="https://en.wikipedia.org/wiki/Pok%C3%A9mon"
+          ><span class="visually-hidden">wikipedia</span></a
+        >
+        <a
+          class="footer__link footer__link--pokemon"
+          href="https://www.pokemon.com/"
+          ><span class="visually-hidden">pokemon.com</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

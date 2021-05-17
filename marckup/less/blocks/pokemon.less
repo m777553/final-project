@@ -1,0 +1,79 @@
+.pokemon {
+  width: 200px;
+  margin: 15px;
+}
+
+.pokemon__wrap {
+	// min-height: 405px;
+  border: 1px solid @text-active;
+  border-radius: 15px;
+  padding: 10px;
+  background: @bg-white;
+  &:hover,
+  &:focus {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 5px 7px @shadow-hover;
+  }
+}
+.pokemon__name {
+  text-shadow: 3px 3px 1px RGBA(97, 97, 97, 0.5);
+  text-transform: capitalize;
+}
+.pokemon__infoWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+// .pokemon__id {
+//   text-align: right;
+// }
+.pokemon__date {
+	text-align: right;
+  margin: 0;
+}
+
+.pokemon__catchBtn {
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 3px 3px 1px 1px @shadow-hover;
+  padding: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  &:hover,
+  &:focus {
+    box-shadow: 1px 1px 1px 1px @shadow-hover;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &.disable {
+    color: rgba(97, 97, 97, 0.5);
+    box-shadow: none;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.5);
+    border-right: 1px solid rgba(97, 97, 97, 0.5);
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+.pokemons--caught .pokemon__catchBtn {
+  display: none;
+}
+@media (min-width: @tablet-width) {
+  .pokemon {
+    width: 220px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pokemon {
+    width: 245px;
+  }
+}

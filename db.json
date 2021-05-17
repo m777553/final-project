@@ -6,15 +6,21 @@
     },
     {
       "name": "ivysaur",
-      "id": 2
+      "id": 2,
+      "isCaught": true,
+      "date": "May 14, 21"
     },
     {
       "name": "venusaur",
-      "id": 3
+      "id": 3,
+      "isCaught": true,
+      "date": "May 14, 21"
     },
     {
       "name": "charmander",
-      "id": 4
+      "id": 4,
+      "isCaught": true,
+      "date": "May 17, 21"
     },
     {
       "name": "charmeleon",
@@ -26,7 +32,9 @@
     },
     {
       "name": "squirtle",
-      "id": 7
+      "id": 7,
+      "isCaught": true,
+      "date": "May 17, 21"
     },
     {
       "name": "wartortle",
@@ -46,7 +54,9 @@
     },
     {
       "name": "butterfree",
-      "id": 12
+      "id": 12,
+      "isCaught": true,
+      "date": "May 14, 21"
     },
     {
       "name": "weedle",
@@ -54,7 +64,9 @@
     },
     {
       "name": "kakuna",
-      "id": 14
+      "id": 14,
+      "isCaught": true,
+      "date": "May 14, 21"
     },
     {
       "name": "beedrill",
@@ -70,7 +82,9 @@
     },
     {
       "name": "pidgeot",
-      "id": 18
+      "id": 18,
+      "isCaught": true,
+      "date": "May 14, 21"
     },
     {
       "name": "rattata",
@@ -138,7 +152,9 @@
     },
     {
       "name": "clefairy",
-      "id": 35
+      "id": 35,
+      "isCaught": true,
+      "date": "May 14, 21"
     },
     {
       "name": "clefable",

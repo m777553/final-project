@@ -1,0 +1,104 @@
+// @font-face {
+//   font-family: Montserrat;
+//   src: url(../Fonts/montserrat-v14-cyrillic_latin-regular.woff2) format("woff2"),
+//   url(../Fonts/montserrat-v14-cyrillic_latin-regular.woff) format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+//
+// @font-face {
+//   font-family: Montserrat;
+//   src: url(../Fonts/montserrat-v14-cyrillic_latin-600.woff2) format("woff2"),
+//   url(../Fonts/montserrat-v14-cyrillic_latin-600.woff) format("woff");
+//   font-weight: bold;
+//   font-style: normal;
+// }
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+body {
+	min-width: 290px;
+	//min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: Verdana, sans-serif;
+	color: @text;
+	font-style: normal;
+	background-color: @bg;
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+ul {
+	list-style: none;
+	.d-nole;
+}
+
+// h1,
+// h2,
+// h3 {
+
+// }
+
+a {
+	//text-transform: uppercase;
+	text-decoration: none;
+	color: @text;
+	background: @bg-white;
+
+	// &:focus,
+	// &:hover {
+	// 	//text-shadow: 1px 1px 1px @shadow-hover;
+	// }
+
+	// &:active {
+	// //	color: @text-active;
+
+	// }
+}
+
+button {
+	background: @bg-white;
+	border: none;
+	cursor: pointer;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden
+ {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// .only-mobile {
+// 	display: none;
+// }
+
+// .not-mobile {}

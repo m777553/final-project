@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\REACT\\Udemi\\hooks-start"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
