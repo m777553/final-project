@@ -1,44 +1,38 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-
-import { INIT_STATE } from "../utilits/consts";
+import { INIT_STATE, ACTION_TYPES } from '../utilits/consts';
 
 function loadPokemonsReducer(state = INIT_STATE, action) {
-  switch (action.type) {
-    case "LOAD_POKEMONS":
-      
-      return { ...state, data: action.payload };
 
-    case "CATCH_POKEMON":
-      console.log(action.payload);
-      const index = action.payload.id;
-      const newData = state.data.map((elem) =>
-        elem.id === index ? action.payload : elem
-      );
+	switch (action.type) {
 
-      return { ...state, data: newData };
+	case ACTION_TYPES.load_pokemons:
 
-    default:
-      return state;
-  }
+		return { ...state, data: action.payload };
+
+	case ACTION_TYPES.catch_pokemon:
+	{const index = action.payload.id;
+		const newData = state.data.map((elem) =>
+			elem.id === index ? action.payload : elem
+		);
+		return { ...state, data: newData };}
+
+	default:
+		return state;
+	}
 }
-
-
 
 function choosePokemonReducer(state = INIT_STATE, action) {
-  switch (action.type) {
-    case "CHOOSE_POKEMON":
-      return { ...state, pokemonSelected: action.payload };
+	switch (action.type) {
+	case ACTION_TYPES.choose_pokemon:
+		return { ...state, pokemonSelected: action.payload };
 
-    default:
-      return state;
-  }
+	default:
+		return state;
+	}
 }
 
-
-
 export default combineReducers({
-  load: loadPokemonsReducer,
-  // catch: catchPokemonReducer,
-  choose: choosePokemonReducer,
+	load: loadPokemonsReducer,
+	choose: choosePokemonReducer,
 });
